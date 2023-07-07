@@ -11,12 +11,10 @@
 <title>JSF</title>
 </head>
 <body>
-	<h1>Primeira Página JSF</h1>
-	<h4>Seja bem vindo(a),</h4>
-	<h:form>
-		<h:button value="enviar" outcome="usuario?faces-redirect=true">
-			<f:param name="usuario" value="osvaldo"/>
-		</h:button>
-	</h:form>
+	<f:metadata>
+		<f:viewParam name="usuario" value="#{loginController.usuario.nome}"/>
+	</f:metadata>
+	
+	<h1>#{loginController.usuario.nome}</h1>
 </body>
 </html>
